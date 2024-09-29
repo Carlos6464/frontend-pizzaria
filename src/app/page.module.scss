@@ -1,0 +1,44 @@
+.containerCenter{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login{
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 600px;
+
+  form{
+    color: var(--white);
+    padding-bottom: 16px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap:16px;
+  }
+}
+
+.text{
+  color: var(--white);
+  text-decoration: none;
+}
+
+.textCadastro{
+  font-size: 20px;
+  color: var(--white);
+}
+
+
+@media (max-width: 620px){
+  .login{
+    width: 90%;
+  }
+}
