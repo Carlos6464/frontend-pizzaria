@@ -57,22 +57,23 @@ export function Form({categories}: Props){
         data.append("price", price);
         data.append("description", description);
         data.append("category_id", category_id);
-        data.append("banner", image)
+        data.append("banner", image as Blob)
 
-        await api.post("/product",data, {
-            headers:{
-                'Content-Type': 'multipart/form-data',
-                Authorization: `Bearer ${token}`
-            }
-        }).catch(err => {
+        try {
+            await api.post("/product", data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+    
+            toast.success("Produto cadastrado com sucesso!");
+            router.push("/dashboard");
+        } catch (err: any) {
             console.log("Erro ao cadastrar produto:", err.response || err.message || err);
             toast.warning("Falha ao cadastrar esse produto!");
-            return false
-        })
-
-
-        router.push("/dashboard");
-        toast.success("Produto cadastrado com sucesso!");
+            return false;
+        }
 
     }
     
