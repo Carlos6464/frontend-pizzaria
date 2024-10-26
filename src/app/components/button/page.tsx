@@ -10,19 +10,19 @@ interface ButtonProps {
   background?: string; // Nova propriedade para o background
 }
 
-const Button = ({ text, type = "button", onClick, background }: ButtonProps) => {
-  const { pending } = useFormStatus();
+const Button: React.FC<ButtonProps> = ({ text, type = "button", onClick, background }) => {
+  const { pending } = useFormStatus(); // Certifique-se de que essa linha está funcionando corretamente
   return (
     <button
       type={type}
       className={styles.button}
       onClick={onClick}
-      style={{ background }} // Estilo inline para o background
+      style={{ background }}
       disabled={pending}
     >
-      {pending? "Carregando..." : text}
+      {pending ? "Carregando..." : text}
     </button>
   );
-}
+};
 
 export default Button;
