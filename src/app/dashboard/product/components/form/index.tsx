@@ -61,6 +61,7 @@ export function Form({categories}: Props){
 
         await api.post("/product",data, {
             headers:{
+                'Content-Type': 'multipart/form-data',
                 Authorization: `Bearer ${token}`
             }
         }).catch(err => {
