@@ -9,7 +9,7 @@ import { deleteCookie } from 'cookies-next';
 import { useRouter} from 'next/navigation';
 import { toast } from 'sonner';
 
-export function Header(){
+export default function Header(){
     const router = useRouter();
 
     async function handleLout(){

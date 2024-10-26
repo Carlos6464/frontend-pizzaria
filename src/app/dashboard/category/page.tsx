@@ -1,6 +1,6 @@
-import Input from '@/app/components/input/page';
+import Input from '@/app/components/input/Input';
 import styles from './styles.module.scss';
-import Button from '@/app/components/button/page';
+import Button from '@/app/components/button/Button';
 import { api } from '@/services/api';
 import { getCookieServer } from '@/lib/cookieServer';
 import { redirect } from 'next/navigation';

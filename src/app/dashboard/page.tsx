@@ -1,4 +1,4 @@
-import { Orders } from "./components/orders/page";
+import { Orders } from "./components/orders/Orders";
 import { api } from "@/services/api";
 import { getCookieServer} from "@/lib/cookieServer"
 import { OrderProps} from "@/lib/order.type";
@@ -18,6 +18,7 @@ const getOrders = async (): Promise<OrderProps[] | []> => {
         return [];
     }
 }
+export const dynamic = 'force-dynamic';
 
 export default async function Dashboard(){
     const orders = await getOrders();

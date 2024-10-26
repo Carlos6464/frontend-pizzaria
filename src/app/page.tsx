@@ -2,11 +2,12 @@ import styles from './page.module.scss'
 import logoImg from './../../public/Logo.svg'
 import Image from 'next/image';
 import Link from 'next/link';
-import Input from './components/input/page';
-import Button from './components/button/page';
+import Input from './components/input/Input';
+import Button from './components/button/Button';
 import {api} from '@/services/api';
 import { cookies } from 'next/headers';
 import { redirect} from 'next/navigation'
+
 
 export default function Login() {
   async function handleLogin(formData: FormData){

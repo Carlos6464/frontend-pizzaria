@@ -4,8 +4,8 @@ import { ChangeEvent, useState } from 'react'
 import styles from './styles.module.scss'
 import { UploadCloud } from 'lucide-react'
 import Image from 'next/image';
-import Input from '@/app/components/input/page';
-import Button from '@/app/components/button/page';
+import Input from '@/app/components/input/Input';
+import Button from '@/app/components/button/Button';
 import { api } from '@/services/api';
 import { getCookieClient } from '@/lib/cookieClient';
 import { toast } from 'sonner';
